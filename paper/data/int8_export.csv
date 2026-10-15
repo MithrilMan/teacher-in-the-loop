@@ -1,0 +1,12 @@
+model,graph,n_rows,utmos_fp32,utmos_int8,int8_minus_fp32,se,fp32_MB,int8_MB,parity_lsd_db,parity_threshold_db,parity_pass,source
+if_sara 30k recipe,all INT8,100,3.7559,3.7324,-0.0235,0.0105,32.77,9.17,1.565,1.18,no,R:onnxq-sara.log; export-sara.log; N
+if_sara 30k recipe,text INT8 only,100,3.7559,3.7416,-0.0143,0.0103,32.77,20.48,1.364,1.18,no,R:onnxq-sara.log
+if_sara 30k recipe,decoder INT8 only,100,3.7559,3.7452,-0.0108,0.0014,32.77,21.46,0.688,1.18,yes,R:onnxq-sara.log (3/3 duration-matched cases)
+if_sara 30k recipe,all INT8 except conv_post,100,3.7559,3.7355,-0.0204,0.0104,32.77,9.18,1.440,1.18,no,R:onnxq2-sara.log
+if_sara 30k recipe,all INT8 except 3 decoder groups,100,3.7559,3.7398,-0.0161,0.0102,32.77,9.40,1.390,1.18,no,R:onnxq2-sara.log; N
+if_sara 50k recipe,all INT8,100,3.7923,3.7918,-0.0004,0.0105,32.8,9.17,1.500,1.17,no,R:onnx-sara-50k.log; export-sara-50k.log; N
+im_nicola 50k recipe,all INT8,100,3.6288,3.6210,-0.0078,0.0053,32.8,9.17,1.219,0.885,no,R:onnx-nicola-50k.log; export-nicola-50k.log; N
+af_heart 50k recipe,all INT8,100,4.421,4.4271,0.0061,0.0022,32.8,9.17,2.245,1.34,no,R:paper-onnx-en-50k.log; paper-export-en-50k.log (3/546 durations; baseline 0.89 dB)
+af_heart final recipe (GAN3 30k),all INT8,100,4.4732,4.4671,-0.0061,0.0008,32.8,9.17,2.452,1.31,no,R:paper-onnx-en-g1.log; paper-export-en-g1.log (3/546 durations; baseline 0.87 dB)
+if_sara final recipe (GAN3 30k),all INT8,100,3.9237,3.9166,-0.0072,0.0109,32.8,9.17,1.832,1.37,no,R:onnx-sara-gan30k.log; export-sara-gan30k.log (4/546 durations; baseline 0.91 dB)
+im_nicola final recipe (GAN3 30k),all INT8,100,3.7259,3.7159,-0.0099,0.0049,32.8,9.17,1.458,1.04,no,R:onnx-nicola-gan30k.log; export-nicola-gan30k.log (1/546 durations; baseline 0.69 dB)

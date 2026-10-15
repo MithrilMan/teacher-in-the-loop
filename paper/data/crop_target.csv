@@ -1,0 +1,5 @@
+teacher_rendered_on,mel_l1_vs_stored_crop,mrstft_vs_stored_crop,utmos,source
+full_utterance,0.014,0.047,4.42,N
+crop_only,1.24,1.36,4.19,N
+crop_pm16_frames,0.87,1.07,4.34,N
+crop_pm64_frames,0.64,0.78,4.38,N

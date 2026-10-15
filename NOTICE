@@ -1,0 +1,27 @@
+Teacher in the Loop
+Copyright 2026 Fabio Angela
+
+This product includes software derived from Paradee
+(https://github.com/sahilmahendrakar/paradee, revision 9c8b4d7504cbee7e64de2d0341bb690f0b0ab708),
+Copyright Sahil Mahendrakar, licensed under the Apache License, Version 2.0:
+
+- training/student.py and training/discriminators.py are unchanged copies of upstream's training/scripts files.
+- training/student_decoder.py is upstream's file reduced to the presets "teacher" and "A", without the
+  experimental generator options.
+- training/gen_teacher.py, training/train_text.py, training/train_decoder.py and training/export.py are
+  rewritten from upstream's gen_teacher.py, train_text.py, train_decoder.py and export_paradee.py. The changes
+  to the decoder recipe and the export are listed in training/README.md and described in the paper.
+- src/titl/voice.py follows upstream's inference module paradee/tts.py.
+
+This product includes software derived from Misaki 0.9.4 (https://github.com/hexgrad/misaki) by hexgrad,
+licensed under the Apache License, Version 2.0: space/web/g2p-en.js is a JavaScript port of misaki/en.py
+(the English G2P with its eSpeak NG fallback) and space/web/g2p-it.js of misaki/espeak.py (the eSpeak NG
+backend used for Italian).
+
+This product uses Kokoro-82M (https://huggingface.co/hexgrad/Kokoro-82M, Apache-2.0) as the teacher. The
+students are trained on its outputs, the training code imports its modules (the kokoro package), and
+src/titl/vocab.json is its phoneme vocabulary.
+
+The sentence lists training/data/wikitext_sents.json, training/data/italian_sents.json and
+eval/heldout.json contain text from Wikipedia (the English list through WikiText-103) and are licensed under
+CC BY-SA 4.0, not Apache-2.0; attribution and changes are listed in training/data/LICENSE.md.

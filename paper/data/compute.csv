@@ -1,0 +1,24 @@
+run,steps,wallclock_start,wallclock_end,s_per_step_last,note,source
+en s7 stage1 30k (pool),30000,15:44:25,18:33:46,0.338,shared GPU,R:s7-pool-30k.log
+en s8 stage1 +20k (pool),20000,21:32:42,22:52:50,0.240,shared GPU,R:s8-pool-50k.log
+en s8 GAN10 5k,5000,22:53:56,23:44:14,0.602,shared GPU,R:e-s8-g10.log
+en s8 GAN3 5k,5000,23:44:56,00:48:55,0.766,shared GPU,R:e-s8-g10-g3.log
+it sara stage1 30k,30000,17:17:34,20:27:07,0.379,ran concurrently with nicola,R:it-sara-s1.log
+it sara stage1 +20k,20000,01:14:58,02:41:02,0.258,concurrent,R:it-sara-s8.log
+it sara GAN10 5k (50k chain),5000,02:42:09,03:34:29,0.626,concurrent,R:it-sara-s8-g10.log
+it sara GAN3 5k (50k chain),5000,03:36:11,04:27:22,0.613,concurrent,R:it-sara-s8-g3.log
+it sara GAN3 30k (G-1; from the 50k-chain GAN10),30000,12:49:50,18:14:48,0.650,shared GPU (5 h 25 min),R:g1-sara-g3-30k.log
+it sara pool regenerated for G-1/H-1 (same settings; fp32 teacher; seed 0),150000,11:24:59,12:49:17,,stage start/end,R:chain-g1.log
+it sara H-1 comb / control 5k (concurrent pair),5000,17:46:52,18:34:26,0.569,two jobs at once,R:h1-sara-comb.log; h1-sara-ctrl.log
+it nicola stage1 30k,30000,17:45:40,20:51:40,0.372,concurrent,R:it-nicola-s1.log
+it nicola stage1 +20k,20000,01:14:58,02:41:59,0.261,concurrent,R:it-nicola-s8.log
+pool sara 150k crops (fp32 teacher),150000,16:13:49,17:15:29,,25.2 ms/crop,R:pool-sara.log
+pool nicola 150k crops (fp32 teacher),150000,16:42:40,17:42:48,,24.5 ms/crop,R:pool-nicola.log
+upstream stage1 50k (reproduction),50000,,,about 0.21,dedicated run,D
+GAN job GPU memory,,,,,about 6.1-6.2 GB per GAN fine-tune,N; D
+it nicola pool regenerated for G-1 (same settings; fp32 teacher; seed 0),150000,22:09:35,23:07:11,,stage start/end,R:chain-g1n.log
+it nicola GAN3 30k (G-1; from the 50k-chain GAN10),30000,23:09:18,05:38:54,,shared GPU (about 6 h 30 min; first and last logged step),R:g1-nicola-g3-30k.log
+en pool regenerated for G-1 (same settings as pool150k; fp16 teacher; 12 shards; seed 0),150000,23:55:05,00:58:41,,stage start/end,R:chain-g1e.log
+en GAN3 30k (G-1; from e-s8-g10),30000,02:48:00,09:28:51,,shared GPU (about 6 h 41 min; first and last logged step; launch waited for GPU memory),R:g1-en-g3-30k.log; chain-g1e.log
+it nicola GAN3 5k (50k chain),5000,03:37:16,04:28:33,,concurrent (log start to step 5000),R:it-nicola-s8-g3.log
+en s3 GAN from step 0 on the stored target (stage-one arm),3000,,,1.4,stopped at 3k (flat),N

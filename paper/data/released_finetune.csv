@@ -1,0 +1,5 @@
+objective,steps,utmos16_start,utmos16_end,mel_l1_start,mel_l1_end,source
+spectral_stored_target,3000,4.3633,3.9656,0.5504,0.5204,R:ft-released-spec/log.jsonl; N
+spectral_stored_target_floor1e-2,1000,4.3633,4.0655,0.5504,0.5055,R:ft-floor/log.jsonl; N
+teacher_loop_spectral_mixer_swapped,500,4.1868,4.0816,0.6438,0.5985,R:ft-tl-spec/log.jsonl; N
+teacher_loop_spectral_plus_head,500,4.1868,3.9851,0.6438,0.6824,R:ft-tl-head/log.jsonl; N

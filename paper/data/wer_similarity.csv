@@ -1,0 +1,22 @@
+voice,decoder,condition,n,wer,wer_minus_teacher_rowmean,wer_minus_teacher_se,sim_same_sentence_teacher,sim_same_sentence_teacher_se,sim_teacher_centroid,source
+af_heart,Kokoro teacher,teacher,200,0.0332,,,,,0.9904,R:paperdiag-en.json; label en-g1
+af_heart,final recipe (GAN3 30k),teacher_forced,200,0.0349,0.0013,0.0012,0.9925,0.0002,0.987,R:paperdiag-en.json; label en-g1
+af_heart,final recipe (GAN3 30k),end_to_end,200,0.0329,0.0002,0.0018,0.9901,0.0003,0.9863,R:paperdiag-en.json; label en-g1
+af_heart,Kokoro teacher,teacher,200,0.0332,,,,,0.9904,R:paperdiag-en.json; label en-50k
+af_heart,50k recipe (GAN3 5k),teacher_forced,200,0.034,0.0012,0.0023,0.9912,0.0003,0.9867,R:paperdiag-en.json; label en-50k
+af_heart,50k recipe (GAN3 5k),end_to_end,200,0.0312,-0.0014,0.002,0.9891,0.0003,0.9862,R:paperdiag-en.json; label en-50k
+af_heart,Kokoro teacher,teacher,200,0.0332,,,,,0.9904,R:paperdiag-en.json; label en-released
+af_heart,released decoder,teacher_forced,200,0.0343,0.0013,0.0023,0.9853,0.0004,0.9825,R:paperdiag-en.json; label en-released
+af_heart,released decoder,end_to_end,200,0.032,-0.0033,0.0033,0.9836,0.0004,0.9819,R:paperdiag-en.json; label en-released
+if_sara,Kokoro teacher,teacher,200,0.0409,,,,,0.9943,R:paperdiag-it.json; label sara-g1
+if_sara,final recipe (GAN3 30k),teacher_forced,200,0.0411,-0.0009,0.0014,0.9956,0.0001,0.9912,R:paperdiag-it.json; label sara-g1
+if_sara,final recipe (GAN3 30k),end_to_end,200,0.0394,-0.0022,0.0022,0.9954,0.0001,0.9917,R:paperdiag-it.json; label sara-g1
+if_sara,Kokoro teacher,teacher,200,0.0409,,,,,0.9943,R:paperdiag-it.json; label sara-50k
+if_sara,50k recipe (GAN3 5k),teacher_forced,200,0.0398,-0.001,0.0015,0.9893,0.0002,0.9847,R:paperdiag-it.json; label sara-50k
+if_sara,50k recipe (GAN3 5k),end_to_end,200,0.0409,-0.0004,0.0022,0.9892,0.0003,0.9854,R:paperdiag-it.json; label sara-50k
+im_nicola,Kokoro teacher,teacher,200,0.0445,,,,,0.9933,R:paperdiag-it.json; label nicola-g1
+im_nicola,final recipe (GAN3 30k),teacher_forced,200,0.0433,-0.0047,0.0031,0.9945,0.0002,0.9895,R:paperdiag-it.json; label nicola-g1
+im_nicola,final recipe (GAN3 30k),end_to_end,200,0.0433,-0.0033,0.0034,0.9933,0.0002,0.9894,R:paperdiag-it.json; label nicola-g1
+im_nicola,Kokoro teacher,teacher,200,0.0445,,,,,0.9933,R:paperdiag-it.json; label nicola-50k
+im_nicola,50k recipe (GAN3 5k),teacher_forced,200,0.0416,-0.0049,0.0029,0.9942,0.0001,0.9901,R:paperdiag-it.json; label nicola-50k
+im_nicola,50k recipe (GAN3 5k),end_to_end,200,0.0428,-0.0041,0.0033,0.9933,0.0002,0.9901,R:paperdiag-it.json; label nicola-50k

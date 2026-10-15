@@ -1,0 +1,38 @@
+comparison,n,mean_diff,se,z,p_two_sided,wins,sign_test_p,source_csv
+if_sara 50k vs 30k recipe (paired),200,0.0407,0.0048,8.48,<1e-6,153/200,<1e-6,paired_50k_vs_30k.csv
+im_nicola 50k vs 30k recipe (paired),200,0.0262,0.0026,10.08,<1e-6,158/200,<1e-6,paired_50k_vs_30k.csv
+if_sara joint minus single decoder,200,-0.0894,0.0081,-11.04,<1e-6,,,joint_decoder.csv
+im_nicola joint minus single decoder,200,-0.0862,0.0046,-18.74,<1e-6,,,joint_decoder.csv
+"af_heart phase-lock gain, released",200,0.0123,0.0031,3.97,7.26e-05,,,final_en_200.csv
+"af_heart phase-lock gain, ours 50k",200,-0.0347,0.0025,-13.88,<1e-6,,,final_en_200.csv
+"if_sara phase-lock gain, ours 50k",200,-0.1909,0.0054,-35.35,<1e-6,,,italian_200.csv
+"im_nicola phase-lock gain, ours 50k",200,-0.079,0.0026,-30.38,<1e-6,,,italian_200.csv
+"af_heart phase-lock gain, final recipe",200,-0.035,0.0016,-21.88,<1e-6,,,final_en_200.csv
+"if_sara phase-lock gain, final recipe",200,-0.2216,0.0049,-45.22,<1e-6,,,italian_200.csv
+"im_nicola phase-lock gain, final recipe",200,-0.0912,0.0029,-31.45,<1e-6,,,italian_200.csv
+if_sara end to end minus teacher-forced (50k),200,0.0133,0.0087,1.53,0.126,,,end_to_end.csv
+im_nicola end to end minus teacher-forced (50k),200,0.0074,0.0054,1.37,0.171,,,end_to_end.csv
+af_heart end to end minus teacher-forced (50k),200,0.0097,0.0031,3.13,0.00175,,,end_to_end.csv
+af_heart end to end minus teacher-forced (released decoder),200,0.0202,0.0039,5.18,<1e-6,,,end_to_end.csv
+af_heart end to end minus teacher-forced (final recipe),200,0.007,0.002,3.5,0.000465,,,end_to_end.csv
+if_sara end to end minus teacher-forced (final recipe),200,0.0132,0.0077,1.71,0.0865,,,end_to_end.csv
+im_nicola end to end minus teacher-forced (final recipe),200,0.004,0.0051,0.78,0.433,,,end_to_end.csv
+if_sara INT8 minus FP32 ONNX (50k),100,-0.0004,0.0105,-0.04,0.97,,,int8_export.csv
+im_nicola INT8 minus FP32 ONNX (50k),100,-0.0078,0.0053,-1.47,0.141,,,int8_export.csv
+af_heart INT8 minus FP32 ONNX (50k),100,0.0061,0.0022,2.77,0.00556,,,int8_export.csv
+af_heart INT8 minus FP32 ONNX (final recipe),100,-0.0061,0.0008,-7.62,<1e-6,,,int8_export.csv
+if_sara INT8 minus FP32 ONNX (final recipe),100,-0.0072,0.0109,-0.66,0.509,,,int8_export.csv
+im_nicola INT8 minus FP32 ONNX (final recipe),100,-0.0099,0.0049,-2.02,0.0433,,,int8_export.csv
+"if_sara INT8 minus FP32 ONNX (30k, all INT8)",100,-0.0235,0.0105,-2.24,0.0252,,,int8_export.csv
+"if_sara INT8 minus FP32 ONNX (30k, decoder only)",100,-0.0108,0.0014,-7.71,<1e-6,,,int8_export.csv
+af_heart GAN3 30k minus GAN3 5k (paired),200,0.0526,0.0024,21.92,<1e-6,197/200,<1e-6,gan3_long.csv
+if_sara GAN3 30k minus GAN3 5k (paired),200,0.1295,0.007,18.5,<1e-6,187/200,<1e-6,gan3_long.csv
+im_nicola GAN3 30k minus GAN3 5k (paired),200,0.0944,0.0033,28.61,<1e-6,197/200,<1e-6,gan3_long.csv
+if_sara H-1 comb minus control (paired),200,0.0187,0.0038,4.92,<1e-6,137/200,<1e-6,R:pair-h1.log
+"af_heart ours 50k minus ours 30k (unpaired, conservative)",200,0.0425,0.0072,5.89,<1e-6,,,final_en_200.csv
+"af_heart ours 50k minus released (unpaired, conservative)",200,0.0436,0.007,6.22,<1e-6,,,final_en_200.csv
+"af_heart ours 30k minus released (unpaired, conservative)",200,0.0011,0.0082,0.13,0.893,,,final_en_200.csv
+"af_heart final recipe minus released (unpaired, conservative)",200,0.0962,0.0063,15.22,<1e-6,,,final_en_200.csv
+"if_sara H-1 comb minus control (unpaired, conservative)",200,0.0187,0.0188,0.99,0.321,,,italian_200.csv
+"if_sara H-1 control minus 50k recipe (unpaired, conservative)",200,0.0154,0.019,0.81,0.418,,,italian_200.csv
+blind A/B s8 preferred over s7 (one-sided binomial),4,,,,0.3125,3/4,,listening.csv

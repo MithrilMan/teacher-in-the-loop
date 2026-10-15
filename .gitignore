@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Training outputs, checkpoints and audio stay out of git
+runs/
+out/
+*.pt
+*.onnx
+*.wav
+
+# Built Hugging Face Space
+space/site/

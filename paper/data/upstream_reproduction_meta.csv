@@ -1,0 +1,26 @@
+item,value,source
+upstream_code_revision,9c8b4d7504cbee7e64de2d0341bb690f0b0ab708,D
+released_weights_revision,8f34b01ef8adcb0bec470b89bf2fd62a7b2369e6,D
+kokoro_revision,f3ff3571791e39611d31c381e3a41a3af07b4987,D
+corpus_candidates,12000,D
+corpus_accepted,11999,D
+corpus_hours,23.898229,D
+train_rows,11799,D
+heldout_rows,200,D
+pipeline_wallclock,about 10 h 03 min (generation + CPU regeneration + all stages),D
+software,Python 3.12.15; torch 2.14.0+cu130; torchaudio 2.11.0; CUDA 13.0; kokoro/misaki 0.9.4,D
+precision,FP32; NVIDIA_TF32_OVERRIDE=0; no AMP,D
+gpu,RTX 4080 SUPER (modified; 32760 MiB),D
+stage_terminal_8case_recon_50k,1.2277,D
+stage_terminal_8case_gan10,1.2598,D
+stage_terminal_8case_gan3,1.8798,D
+tf32_paired_pilot_on,2.8975,D (8 cases)
+tf32_paired_pilot_off,2.9041,D (8 cases)
+cpu_eval_rows_reproduction_a_below_released,200 of 200 in each of the four comparisons (teacher-conditioned and full; raw and with phase lock),D
+gan_stages_rows_improved_over_stage1,"200 of 200 on both paths (teacher-conditioned and full); GAN3 vs stage one, CPU renders",D
+gan_stages_mean_gain_over_stage1,+0.704 teacher-conditioned (1.9388 - 1.2349); +0.677 full (1.9108 - 1.2338),D
+reproduction_b_seeds,42 (Python; NumPy; PyTorch),D
+numerics_replay_spectral_gradient_rel_l2_vs_cpu_default_cuda,25.364% (one fixed batch; TF32 convolutions),D
+numerics_replay_spectral_gradient_rel_l2_vs_cpu_tf32_disabled,0.5244% (same batch),D
+numerics_attribution_share_1e-5_to_1e-4,94.664% of the waveform-gradient difference (signed projection); log floor 1e-5,D
+tf32_paired_pilot_steps,2000 updates per arm (batch 8; 64-frame crops; only cuDNN TF32 differs),D

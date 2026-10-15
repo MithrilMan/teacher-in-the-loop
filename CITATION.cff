@@ -1,0 +1,64 @@
+cff-version: 1.2.0
+message: "If you use this software or the released weights, please cite the paper below (preferred-citation)."
+type: software
+title: "Teacher in the Loop: training, evaluation and inference code"
+abstract: >-
+  Code for the paper "Teacher in the Loop: Reliable Distillation of Kokoro-82M into 8M-Parameter Single-Voice
+  Students, in English and Italian": the revised decoder recipe, the evaluation behind the paper's tables, and an
+  ONNX inference package for the released voices af_heart, if_sara and im_nicola.
+authors:
+  - family-names: Angela
+    given-names: Fabio
+    affiliation: Independent researcher
+    email: fabio.angela@mithrilsolution.com
+    orcid: "https://orcid.org/0009-0001-1572-1041"
+version: 0.1.0
+date-released: "2026-10-15"
+license: Apache-2.0
+repository-code: "https://github.com/MithrilMan/teacher-in-the-loop"
+repository-artifact: "https://huggingface.co/MithrilMan/teacher-in-the-loop"
+url: "https://github.com/MithrilMan/teacher-in-the-loop"
+keywords:
+  - text-to-speech
+  - knowledge distillation
+  - Kokoro-82M
+  - ONNX
+  - Italian
+preferred-citation:
+  type: article
+  title: "Teacher in the Loop: Reliable Distillation of Kokoro-82M into 8M-Parameter Single-Voice Students, in English and Italian"
+  authors:
+    - family-names: Angela
+      given-names: Fabio
+      affiliation: Independent researcher
+      email: fabio.angela@mithrilsolution.com
+      orcid: "https://orcid.org/0009-0001-1572-1041"
+  status: preprint
+  publisher:
+    name: Zenodo
+  year: 2026
+  month: 10
+  doi: "10.5281/zenodo.23400040"
+  url: "https://doi.org/10.5281/zenodo.23400040"
+references:
+  - type: article
+    title: "Paradee: Distilling Kokoro-82M into an 8M-Parameter Single-Voice Text-to-Speech Model"
+    authors:
+      - family-names: Mahendrakar
+        given-names: Sahil
+    journal: "arXiv preprint"
+    year: 2026
+    identifiers:
+      - type: other
+        value: "arXiv:2610.06817"
+        description: arXiv identifier
+    url: "https://arxiv.org/abs/2610.06817"
+  - type: software
+    title: paradee
+    authors:
+      - family-names: Mahendrakar
+        given-names: Sahil
+    year: 2026
+    license: Apache-2.0
+    repository-code: "https://github.com/sahilmahendrakar/paradee"
+    commit: 9c8b4d7504cbee7e64de2d0341bb690f0b0ab708

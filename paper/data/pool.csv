@@ -1,0 +1,16 @@
+quantity,value,source
+crops_per_voice,150000,N; R:pool-*.log
+crop_frames,64 (1.6 s),N; code training/pool.py
+head_bytes_per_crop,338 KB (22 x 7681 fp16),N; code training/pool.py HEAD_FRAMES
+source_bytes_per_crop,77 KB (38400 fp16),N
+pool_size_150k,about 62 GB,N
+render_ms_per_crop_en_fp16,15,N
+render_ms_per_crop_it_fp32,24.5-25.2,R:pool-sara.log; pool-nicola.log; N (25 ms/crop)
+head_roundtrip_mel_l1_it_fp32,0.007 (Sara 0.00735; Nicola 0.0069),R:pool-sara.log; pool-nicola.log; N
+step_time_pool_s,0.27,N (GPU shared with two GAN runs)
+step_time_live_teacher_s,0.57-0.65,N
+fp16_teacher_mel_l1_vs_fp32,0.02 (same UTMOS),N
+bf16_teacher_mel_l1_vs_fp32,0.20 (UTMOS -0.08; rejected),N
+gpu_source_stft_mel_l1_vs_cpu,0.001,N
+gpu_source_stft_phase_mismatch_vs_cpu,6 values per million (on the branch cut),N
+gpu_source_stft_step_speedup,2x (step twice as fast as with the CPU excitation STFT),N

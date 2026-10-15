@@ -1,0 +1,5 @@
+decoder,utmos_raw,utmos_phase_lock33,gain,gain_se,source
+released,4.3628,4.3730,0.0101,0.0061,R:locktest.json; N
+ours_30k_gan10_gan3,4.3645,4.3311,-0.0334,0.0050,R:locktest.json (new_final)
+earlier_lab_pipeline,4.0211,3.9866,-0.0346,0.0112,R:locktest.json (old_pipeline)
+upstream_seeded_full_recipe,2.8477,2.8663,0.0186,0.0117,R:locktest.json (seeded_gan3)

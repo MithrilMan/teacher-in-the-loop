@@ -1,0 +1,35 @@
+quantity,value,unit,source
+server_gpu,"modified NVIDIA RTX 4080 SUPER, 32760 MiB (paper: 32 GB)",,D
+server_cpu,"8 virtual cores, Xeon Gold 6338",cores,D
+server_ram,43,GiB,D
+container_cpu_limit,4,CPU cores per job,D
+container_ram_limit,20,GB per job,D
+gpu_sharing,"usually one to three of the author's jobs at once, besides other services",jobs,N; pool.csv step_time_pool_s (timed while two GAN runs shared the GPU)
+log_mel_l1_settings,FFT 1024; hop 256; 80 mel bands,,code training/common.py spec_losses
+periodicity_window,40 ms (960 samples) voiced frames; normalized autocorrelation at the F0 lag,,code eval/decoder.py periodicity
+contrast_rows,40 (first held-out rows),rows,code eval/contrast.py; harmonic_contrast.csv
+contrast_settings,YIN hop 300 samples; hops within 25 dB of the 95th-percentile frame level; 40 ms (960-sample) Hann window; 4096-point FFT; peak and valley within +-10 % of F0,,code eval/contrast.py
+similarity_centroid_rows,40 (training rows of the teacher),rows,code eval/wer_similarity.py
+excitation_seed,1000 + held-out row index,,code eval/common.py
+int8_v2_closer_to_float32,123 of 127 chunks where both schemes keep every duration; pooled over five earlier models (52 chunks each): the two of int8_scheme_v2.csv and three others,chunks,D
+int8_graph_bytes_v1_to_v2,9064300 -> 9248046 (9.06 -> 9.25 MB),bytes,D
+int8_v2_cpu_latency,"410 (v1: 395) for one 8.85-second sentence, warm, two CPU threads",ms,D
+parity_gate_max_duration_change,2,% of token durations,code training/quantize.py MAX_DURATION_CHANGE
+parity_gate_distance_ratio,1.5,x the re-seeded float32 distance,code training/quantize.py MAX_DISTANCE_RATIO
+parity_gate_cases,"3 built-in cases, 546 tokens",,R:export-sara-gan30k.log; export-nicola-gan30k.log; paper-export-en-g1.log
+parity_gate_comparable_cases,"if_sara 1 of 3 (30k, 50k and final recipe); im_nicola 2 of 3 (50k and final recipe); if_sara 30k decoder-only graph 3 of 3; af_heart: 3 of 546 durations moved, comparable cases not recorded",cases,R:export-sara.log; export-sara-50k.log; export-nicola-50k.log; export-sara-gan30k.log; export-nicola-gan30k.log; onnxq-sara.log; N
+joint_decoder_crops_per_voice,16 per voice per step in stage one; 8 per voice in GAN10 and GAN3,crops,"N; runs j-s1, j-g10, j-g3 (launch configuration)"
+release_package_vs_paper_decoder,-0.004 +- 0.007 (3.878 vs 3.882); better on 102 of 200,"UTMOS, paired, 200 rows",R:valid-pair
+release_package_end_to_end,"3.883 vs 3.894 for the paper's decoder in the same evaluation (end_to_end.csv: 3.8951, separate evaluation)","UTMOS, 200 rows",R:valid-e2e
+release_package_int8_minus_float32,-0.030 +- 0.009,"UTMOS, paired, 100 rows",R:valid-int8
+speed_protocol,one intra-op and one inter-op thread; first 8 held-out sentences per voice; one warm-up pass; 5 (session 1) or 9 (session 2) timed passes,,L:eval/bench_onnx.py
+comb_input_parameters,76896,parameters,R:h1-sara-comb.log
+gan3_30k_lr_at_step_5000,"93 % of peak: min(1, s/1000) * 0.5 * (1 + cos(pi s / 30000)) at s = 5000",,code training/train_decoder.py (schedule)
+paradee_released_int8_file,9037971 (9.04 MB),bytes,"size of the released paradee_int8.onnx, Hugging Face revision 8f34b01 (cited)"
+issue3_independent_reconstruction_utmos,about 1.2,UTMOS,the public GitHub issue #3 (cited)
+kokoro_frame,600 samples (25 ms at 24 kHz); F0 and N at two values per frame,,Kokoro code and config.json (cited; revision f3ff357)
+kokoro_style_vector,256 (two halves of 128: decoder and prosody predictor),dimensions,Kokoro code and config.json (cited; revision f3ff357)
+kokoro_phoneme_features,512,channels,Kokoro code and config.json (cited; revision f3ff357)
+kokoro_excitation,fundamental + 8 overtones (9 components),,Kokoro code (cited; revision f3ff357)
+kokoro_generator_upsampling,60 (10 x 6),,Kokoro config.json (cited; revision f3ff357)
+kokoro_istft_head,"conv_post 22 channels (11 log-magnitude + 11 phase); iSTFT FFT 20, hop 5; 4800 frames/s",,Kokoro code and config.json (cited; revision f3ff357)

@@ -1,0 +1,4 @@
+voice,n,utmos_30k,utmos_50k,diff_50k_minus_30k,diff_se,rows_better,source
+af_heart,200,4.3719,4.4144,0.0425,,,R:locktest-200.json (unpaired means; same rows and source seeds); N
+if_sara,200,3.7117,3.7524,0.0407,0.0048,153,R:pair-sara.log; N
+im_nicola,200,3.5752,3.6014,0.0262,0.0026,158,R:pair-nicola.log; N

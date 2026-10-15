@@ -1,0 +1,53 @@
+[project]
+name = "teacher-in-the-loop"
+version = "0.1.0"
+description = "8M-parameter single-voice text-to-speech students distilled from Kokoro-82M, in English and Italian"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [{ name = "Fabio Angela" }]
+# misaki 0.9.4, the version that made the teacher data, supports Python up to 3.12
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "numpy",
+    "onnxruntime>=1.17",
+    "huggingface-hub>=0.23",
+    # misaki[en] without spacy-curated-transformers, which pulls in PyTorch and is only needed for misaki's transformer mode
+    "misaki==0.9.4",
+    "spacy>=3.7",
+    "num2words",
+    "phonemizer-fork",
+    "espeakng-loader",
+]
+
+[project.optional-dependencies]
+# the paper's runs: Python 3.12, torch 2.14.0 (CUDA 13.0), torchaudio 2.11.0, kokoro 0.9.4
+train = [
+    "torch>=2.4",
+    "torchaudio>=2.4",
+    "kokoro==0.9.4",
+    "onnx>=1.16",
+]
+# evaluation: UTMOS (torch hub), Whisper and WavLM (transformers), statistics
+eval = [
+    "teacher-in-the-loop[train]",
+    "transformers",
+    "scipy",
+]
+test = ["pytest"]
+
+[project.scripts]
+titl = "titl.__main__:main"
+
+[project.urls]
+"Source" = "https://github.com/MithrilMan/teacher-in-the-loop"
+"Weights" = "https://huggingface.co/MithrilMan/teacher-in-the-loop"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/titl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

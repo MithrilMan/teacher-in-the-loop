@@ -1,0 +1,7 @@
+arm,description,target,head_phase_loss,gan,utmos16_1k,utmos16_2k,utmos16_3k,utmos16_6k,utmos16_10k,source
+s0,upstream objective (stored full-utterance target; spectral),stored,no,no,1.2568,1.2461,1.2379,1.2292,,R:s0-recipe/log.jsonl; N
+s1,teacher in the loop; spectral only,teacher-loop,no,no,1.2533,1.2338,1.2359,,,R:s1-tl/log.jsonl; N (stopped at 4k: 1.2338)
+s2,teacher in the loop + head log-magnitude + sin(phase) L1 (weights 1/1),teacher-loop,yes,no,1.2448,1.3693,1.6295,2.5637,2.7185,R:s2-tl-head/log.jsonl; N
+s3,GAN from step 0 on stored target (spectral weight 45),stored,no,yes,1.2580,1.2377,1.2372,,,R:s3-gan/log.jsonl; N (stopped at 3k)
+s5,s2 with phase weight 5 and fp16 teacher,teacher-loop,yes,no,1.2587,1.5172,2.1670,2.5326,2.6497,R:s5-tl-phase5/log.jsonl; N
+s6,s5 + GAN from step 0 (all reconstruction terms x45),teacher-loop,yes,yes,1.2579,1.7236,2.2747,3.2876,3.5852,R:s6-tl-head-gan/log.jsonl; N

@@ -1,0 +1,9 @@
+measurement,cohort,released,our_reproduction,source
+full text-to-audio raw,200 held (CPU render),4.3950,1.9108,D
+full text-to-audio with phase-lock,200 held (CPU render),4.4088,2.2316,D
+teacher-conditioned raw,200 held (CPU render),4.3712,1.9388,D
+teacher-conditioned with phase-lock,200 held (CPU render),4.3821,2.2637,D
+stage 1 (50k) teacher-conditioned raw,200 held (CPU render),,1.2349,D
+stage 1 (50k) full student raw,200 held (CPU render),,1.2338,D
+teacher (cached Kokoro target),200 held,4.5211,4.5211,D
+earlier seeded/wrapped run full raw,200 held (CPU render),,2.8691,D

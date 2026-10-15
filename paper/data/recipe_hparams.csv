@@ -1,0 +1,25 @@
+group,parameter,upstream,ours,source
+data,teacher,Kokoro-82M v1.0 af_heart,Kokoro-82M v1.0 (af_heart / if_sara / im_nicola),P:Sec4.2; code training/gen_teacher.py
+data,training sentences,11799 (EN reproduction),5799 (EN; 12 of 24 shards) / 12000 (IT),R:s7-pool-30k.log; R:it-sara-s1.log
+data,held-out sentences,200,200 (first 16 tracked during training),code training/gen_teacher.py; eval/heldout.json
+data,crop length,64 frames = 1.6 s,64 frames = 1.6 s,P:Sec4.4; code training/pool.py
+data,stage-1 target,stored full-utterance teacher waveform cropped,teacher re-rendered on the crop with the same excitation (live) or read from a pre-rendered pool,code training/pool.py; training/train_decoder.py; N
+data,pool,none,150000 random crops per voice; head log-magnitude + sin(phase) + excitation in fp16,code training/pool.py; N
+data,pool teacher precision,n/a,fp16 autocast (EN) / fp32 stored as fp16 (IT),code training/pool.py --teacher-fp16; N
+model,decoder,preset A (3.85M; 256/128 channels; kernels 3/7/11; 16-d learned style),unchanged,P:Sec4.3; code training/student_decoder.py
+model,harmonic source mixer,random init; frozen (no gradient),copied from the teacher and frozen,D (causal audit); code training/train_decoder.py
+model,text student,s+mlp 4.23M (8000 steps; bs 32; lr 5e-4),reused unchanged (earlier Italian students),P:Sec4.4; N
+loss,stage-1 reconstruction,log-mel L1 (FFT 1024; hop 256; 80 bands) + MR-STFT (spectral convergence + log-mag L1; FFT 512/1024/2048; hop FFT/4),same,code training/common.py spec_losses
+loss,head distillation,none,L1 on head log-magnitude (11 bins) weight 1,code training/train_decoder.py --head-weight; training/recipe.py
+loss,phase distillation,none,L1 on sin(head phase) (11 bins) weight 1,code training/train_decoder.py --phase-weight; training/recipe.py
+loss,GAN,MPD (2/3/5/7/11) + MRD (512/1024/2048); LSGAN + 2 x feature matching,same critics and losses,code training/train_decoder.py --gan; training/discriminators.py
+loss,GAN reconstruction weight,10 then 3 (spectral terms),10 then 3 (spectral + head + phase terms),code training/recipe.py --mel-weight
+optim,optimizer,AdamW betas (0.8 0.99) wd 0.01,same,code training/train_decoder.py
+optim,gradient clip,5,5,code training/train_decoder.py
+optim,stage-1 steps,50000 (bs 16; lr 2e-4; warmup 1000 + cosine),30000 from scratch (bs 16; lr 2e-4; warmup 1000 + cosine; seed 1) + 20000 warm restart (peak lr 1e-4; warmup 1000 + cosine),code training/recipe.py
+optim,GAN10,5000 steps bs 8; lr 2e-4; warmup 1000 + cosine,5000 steps bs 8; lr 2e-4; warmup 1000 + cosine; fresh optimizer and critics,code training/recipe.py; upstream code 9c8b4d7 (cited; train_decoder.py defaults; not overridden by the published GAN commands)
+optim,GAN3,5000 steps bs 8 (first 8 shards); lr 2e-4; warmup 1000 + cosine,30000 steps bs 8; lr 2e-4; warmup 1000 + cosine over the 30000 steps; fresh optimizer and critics; full training set (the published 5000 steps give the 50k recipe),code training/recipe.py; upstream code 9c8b4d7 (cited; train_decoder.py defaults; not overridden by the published GAN commands)
+optim,discriminator lr,2e-4 constant,2e-4 constant,code training/train_decoder.py (schedule applied to the generator only)
+precision,training,FP32 (reproduction: TF32 off),FP32 student; GPU source STFT (DC/Nyquist phase fixed),code training/common.py gpu_source_stft; N
+export,post-filter,phase-lock 2-8 kHz 33 frames,removed,code training/export.py; NOTICE
+export,INT8 storage,axis-0 scales (per LSTM direction; per MatMul input row; int8 biases),per output channel (per gate row for LSTMs); biases/norms/windows FP32,code training/quantize.py; D

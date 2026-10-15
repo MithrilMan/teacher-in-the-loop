@@ -1,0 +1,11 @@
+quantity,value,source
+italian_corpus_train_sentences,12000,D
+italian_corpus_heldout_sentences,200,D
+italian_corpus_source_articles,1203,training/data/italian_sents.json (22 held-out and 1181 training articles; 1312 articles were scanned)
+italian_corpus_dataset,wikimedia/wikipedia 20231101.it rev b04c8d1,training/README.md; training/data/italian_sents.json
+sara_teacher_audio_hours,33.2495,D
+teacher_whisper_wer_if_sara_200,10.2536%,D (faster-whisper-small; includes ASR and normalization errors)
+phonemes,misaki 0.9.4 EspeakG2P(language=it) on eSpeak NG; t-dental/d-dental mapped to t/d,D
+kokoro_style_decoder_rel_rms_variation_across_200_heldout_lengths,af_heart 6.50% / if_sara 6.85% / im_nicola 7.97%,D
+upstream_mixer,two source-mixer parameters receive no gradient (no_grad); random init kept,D (causal audit)
+instance_norm_ops,58 InstanceNorm operations recompute statistics over the input extent (track_running_stats=False),D

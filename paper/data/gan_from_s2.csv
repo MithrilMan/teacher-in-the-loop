@@ -1,0 +1,3 @@
+stage,init,spectral_weight,steps,utmos16_end,source
+g1 (GAN10),s2 10k (2.719),10,5000,3.588,R:g1-s2-gan10/log.jsonl; N
+g2 (GAN3),g1 5k,3,5000,3.968,R:g2-gan3/log.jsonl; N

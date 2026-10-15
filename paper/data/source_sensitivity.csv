@@ -1,0 +1,7 @@
+decoder,redraw_mel_l1,utmos,utmos_no_harmonic_source,utmos_source_white_noise,source
+teacher,0.0922,4.5234,1.7356,3.4730,R:sensitivity/sensitivity.json; N
+released,0.0358,4.3637,1.2871,2.0945,R:sensitivity/sensitivity.json; N
+upstream_clean_stage1_50k,0.0154,1.2308,1.2317,1.2330,R:sensitivity/sensitivity.json; N
+upstream_seeded_stage1_50k,0.0125,2.0469,1.6851,1.3811,R:sensitivity/sensitivity.json
+upstream_clean_gan3,0.0270,1.8407,1.2285,1.2289,R:sensitivity/sensitivity.json
+upstream_seeded_gan3,0.0296,2.8330,2.2045,1.8550,R:sensitivity/sensitivity.json

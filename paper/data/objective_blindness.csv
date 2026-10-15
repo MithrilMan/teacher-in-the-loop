@@ -1,0 +1,8 @@
+decoder,utmos,mel_l1,mrstft,periodicity,source
+teacher_target,4.5228,,,0.6062,R:baseline/baseline.json; N
+teacher_rerender_floor,,0.0967,0.2332,,R:baseline/baseline.json; N
+released,4.3633,0.5504,0.8894,0.6181,R:baseline/baseline.json; N
+upstream_clean_stage1_50k,1.2310,0.5198,0.9758,0.5835,R:baseline/baseline.json; N
+upstream_seeded_stage1_50k,2.0502,0.5302,0.9793,0.5835,R:baseline/baseline.json; N
+upstream_clean_gan3,1.8423,0.6418,1.0550,0.5942,R:baseline/baseline.json; N
+upstream_seeded_gan3,2.8427,0.6065,1.0205,0.5921,R:baseline/baseline.json; N

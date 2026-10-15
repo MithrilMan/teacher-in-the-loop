@@ -1,0 +1,3 @@
+model,token_durations_changed_v1,token_durations_changed_v2,median_lsd_db_v1,median_lsd_db_v2,fp32_reseeded_lsd_db,chunks,tokens,source
+if_sara (earlier model; upstream-recipe decoder),27,9,3.45,2.86,4.70,52,5441,D
+im_nicola (earlier model; upstream-recipe decoder),35,27,3.74,3.40,3.38,52,5441,D

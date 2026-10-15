@@ -1,0 +1,13 @@
+session,graph,voice,audio_s,passes,x_realtime_median,x_realtime_best,source
+1,Paradee released int8 (HF 8f34b01),af_heart,61.17,5,25.2,25.2,L:eval/bench_onnx.py session 1 (5 passes; 2026-10-14 morning)
+1,ours final recipe int8,af_heart,61.45,5,26.3,26.4,L:eval/bench_onnx.py session 1 (5 passes; 2026-10-14 morning)
+1,ours final recipe fp32,af_heart,61.4,5,26.4,26.5,L:eval/bench_onnx.py session 1 (5 passes; 2026-10-14 morning)
+1,ours final recipe int8,if_sara,65.35,5,25.5,26.2,L:eval/bench_onnx.py session 1 (5 passes; 2026-10-14 morning); irregular passes
+1,ours final recipe int8,im_nicola,71.58,5,16.5,18.2,"L:eval/bench_onnx.py session 1 (5 passes; 2026-10-14 morning); disturbed by other load, repeated in session 2"
+2,Paradee released int8 (HF 8f34b01),af_heart,61.17,9,23.4,23.5,L:eval/bench_onnx.py session 2 (9 passes; 2026-10-14 11:00 UTC; graphs in this order) (first)
+2,ours final recipe int8,af_heart,61.45,9,24.3,24.4,L:eval/bench_onnx.py session 2 (9 passes; 2026-10-14 11:00 UTC; graphs in this order)
+2,ours final recipe int8,if_sara,65.35,9,24.7,24.9,L:eval/bench_onnx.py session 2 (9 passes; 2026-10-14 11:00 UTC; graphs in this order)
+2,ours final recipe int8,im_nicola,71.58,9,24.9,25.3,L:eval/bench_onnx.py session 2 (9 passes; 2026-10-14 11:00 UTC; graphs in this order)
+2,ours 50k recipe int8,if_sara,65.35,9,24.6,24.7,L:eval/bench_onnx.py session 2 (9 passes; 2026-10-14 11:00 UTC; graphs in this order)
+2,ours 50k recipe int8,im_nicola,71.58,9,25.2,25.2,L:eval/bench_onnx.py session 2 (9 passes; 2026-10-14 11:00 UTC; graphs in this order)
+2,Paradee released int8 (HF 8f34b01),af_heart,61.17,9,25.3,25.4,L:eval/bench_onnx.py session 2 (9 passes; 2026-10-14 11:00 UTC; graphs in this order) (last)

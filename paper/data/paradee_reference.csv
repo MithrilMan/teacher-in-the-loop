@@ -1,0 +1,23 @@
+quantity,value,source
+teacher_utmos_200,4.52,P:Table2/Table5
+stage1_spectral_50k_decoder_alone,2.98,P:Table5
+stage1_spectral_50k_full_student,3.00,P:Table5
+gan45_3k_decoder_alone,3.02,P:Table5 (ablation; not part of the final chain)
+gan10_5k_decoder_alone,4.29,P:Table5
+gan10_5k_full_student,4.32,P:Table5
+gan3_5k_decoder_alone,4.37,P:Table5
+gan3_5k_full_student,4.39,P:Table5
+gan3_full_student_phase_lock,4.41,P:Table5/Table2
+student_params_M,8.07,P:Sec4.3/Table2
+text_side_params_M,4.23,P:Sec4.3
+decoder_params_M,3.85,P:Sec4.3
+decoder_gflop_per_s_audio,3.36,P:Sec4.3
+int8_file_MB,8.45,P:Sec4.6
+corpus_sentences,12000,P:Sec4.2
+corpus_hours,23.9,P:Sec4.2
+heldout_sentences,200,P:Sec4.2
+stage1_steps,50000,P:Sec4.4
+stage1_batch,16,P:Sec4.4
+stage1_lr,2e-4,P:Sec4.4
+gan_batch,8,P:Sec4.4
+crop_seconds,1.6,P:Sec4.4

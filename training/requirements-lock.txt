@@ -1,0 +1,132 @@
+# Exact package versions of the environment in which the paper's models were trained and evaluated.
+#
+# Python 3.12.15 (CPython), Linux x86-64; torch 2.14.0 built for CUDA 13.0 (the NVIDIA and CUDA packages below are
+# installed by torch on Linux). Read from the installed package metadata of that environment.
+#
+# Contents: the dependencies of `pip install ".[train,eval]"` (pyproject.toml) and everything they require,
+# including misaki[en] through kokoro. Left out because training/ and eval/ never import them: datasets,
+# matplotlib, openai-whisper, jiwer, soundfile and their own dependencies (29 packages in all). This
+# repository itself is installed separately (pip install -e . --no-deps).
+#
+#   python3.12 -m venv .venv && . .venv/bin/activate
+#   pip install -r training/requirements-lock.txt
+#   pip install -e . --no-deps
+#
+# Misaki's English pipeline also needs spaCy's model en_core_web_sm 3.8.0 (MIT), which Misaki downloads on first
+# use when it is missing; this is the version installed with the environment above
+# (SHA-256 1932429db727d4bff3deed6b34cfc05df17794f4a52eeb26cf8928f7c1a0fb85):
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+addict==2.4.0
+annotated-doc==0.0.5
+annotated-types==0.8.0
+anyio==4.15.1
+attrs==26.1.0
+babel==2.18.0
+blis==1.3.3
+catalogue==2.0.10
+certifi==2026.7.22
+charset-normalizer==3.5.1
+click==8.5.0
+cloudpathlib==0.25.0
+cloudpickle==3.1.2
+confection==1.3.3
+csvw==4.1.0
+cuda-bindings==13.4.1 ; platform_system == "Linux"
+cuda-pathfinder==1.8.1 ; platform_system == "Linux"
+cuda-toolkit==13.0.3.0 ; platform_system == "Linux"
+curated-tokenizers==0.0.10
+curated-transformers==0.1.1
+cymem==2.0.13
+dlinfo==2.0.0
+docopt==0.6.2
+espeakng-loader==0.2.4
+filelock==3.32.6
+flatbuffers==25.12.19
+fsspec==2026.6.0
+h11==0.16.0
+hf-xet==1.6.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==1.31.0
+idna==3.19
+isodate==0.7.2
+Jinja2==3.1.6
+joblib==1.6.0
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+kokoro==0.9.4
+language-tags==1.3.1
+loguru==0.7.3
+markdown-it-py==4.2.0
+MarkupSafe==3.0.3
+mdurl==0.1.2
+misaki==0.9.4
+ml_dtypes==0.6.0
+mpmath==1.3.0
+murmurhash==1.0.15
+networkx==3.6.1
+num2words==0.5.14
+numpy==2.5.3
+nvidia-cublas==13.1.1.3 ; platform_system == "Linux"
+nvidia-cuda-cupti==13.0.85 ; platform_system == "Linux"
+nvidia-cuda-nvrtc==13.0.88 ; platform_system == "Linux"
+nvidia-cuda-runtime==13.0.96 ; platform_system == "Linux"
+nvidia-cudnn-cu13==9.24.0.43 ; platform_system == "Linux"
+nvidia-cufft==12.0.0.61 ; platform_system == "Linux"
+nvidia-cufile==1.15.1.6 ; platform_system == "Linux"
+nvidia-curand==10.4.0.35 ; platform_system == "Linux"
+nvidia-cusolver==12.0.4.66 ; platform_system == "Linux"
+nvidia-cusparse==12.6.3.3 ; platform_system == "Linux"
+nvidia-cusparselt-cu13==0.8.1 ; platform_system == "Linux"
+nvidia-nccl-cu13==2.30.7 ; platform_system == "Linux"
+nvidia-nvjitlink==13.4.52 ; platform_system == "Linux"
+nvidia-nvshmem-cu13==3.4.5 ; platform_system == "Linux"
+nvidia-nvtx==13.0.85 ; platform_system == "Linux"
+onnx==1.22.0
+onnxruntime==1.30.0
+packaging==26.3
+phonemizer-fork==3.3.2
+preshed==3.0.13
+protobuf==7.36.1
+pydantic==2.13.5
+pydantic_core==2.46.5
+Pygments==2.21.0
+pyparsing==3.3.2
+python-dateutil==2.9.0.post0
+PyYAML==6.0.3
+rdflib==7.6.0
+referencing==0.37.0
+regex==2026.9.10
+requests==2.34.2
+rfc3986==1.5.0
+rich==15.0.0
+rpds-py==2026.6.3
+safetensors==0.8.0
+scipy==1.18.1
+segments==2.4.0
+setuptools==84.0.0
+shellingham==1.5.4
+six==1.17.0
+smart_open==8.0.1
+spacy==3.8.16
+spacy-curated-transformers==0.3.1
+spacy-legacy==3.0.12
+spacy-loggers==1.0.5
+srsly==2.5.3
+sympy==1.14.0
+termcolor==3.3.0
+thinc==8.3.13
+tokenizers==0.23.2
+torch==2.14.0
+torchaudio==2.11.0
+tqdm==4.70.1
+transformers==5.17.0
+triton==3.8.0 ; platform_system == "Linux"
+typer==0.27.2
+typing_extensions==4.16.0
+typing-inspection==0.4.4
+uritemplate==4.2.0
+urllib3==2.7.0
+wasabi==1.1.3
+weasel==1.0.0
+wrapt==2.4.1

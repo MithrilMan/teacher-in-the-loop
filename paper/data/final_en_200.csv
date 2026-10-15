@@ -1,0 +1,10 @@
+decoder,utmos_raw,ci95,utmos_phase_lock33,lock_gain,lock_gain_se,source
+released,4.3708,0.0111,4.3831,0.0123,0.0031,R:locktest-200.json; N
+ours_s7_30k_gan10_gan3,4.3719,0.0116,4.3402,-0.0317,0.0028,R:locktest-200.json (s7_final)
+ours_s8_50k_gan10_gan3,4.4144,0.0081,4.3797,-0.0347,0.0025,R:locktest-200.json (s8_final); N
+ours_s8_50k_gan10_gan3_30k,4.467,0.0055,4.432,-0.035,0.0016,"R:locktest-200-en-g1.json (g1; final recipe, GAN3 30k)"
+ours_s8_stage1_50k,4.1311,0.0214,4.3187,0.1876,0.0060,R:locktest-200.json (s8_stage1)
+ours_s7_stage1_30k,3.9303,0.0259,4.2365,0.3062,0.0078,R:locktest-200.json (s7_stage1)
+ours_s7_30k_gan3_only,4.358,0.011,4.319,-0.039,0.003,N (JSON overwritten by later run)
+upstream_seeded_full_recipe,2.889,0.033,2.916,0.027,0.007,N (JSON overwritten)
+upstream_clean_full_recipe,1.940,0.045,2.259,0.320,0.010,N (JSON overwritten)

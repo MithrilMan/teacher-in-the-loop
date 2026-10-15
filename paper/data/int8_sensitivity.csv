@@ -1,0 +1,7 @@
+part,setting,n_rows,lsd_db_from_fp32,utmos,note,source
+decoder (if_sara 30k),FP32 reseeded (noise floor),50,0.784,3.7682,,R:qsens-sara.json
+decoder (if_sara 30k),all INT8,50,0.706,3.7568,UTMOS -0.011,R:qsens-sara.json; N
+decoder (if_sara 30k),keep generator.conv_post FP32 (4928 params),50,0.389,3.7596,,R:qsens-sara.json (keep_top1)
+decoder (if_sara 30k),keep conv_post + ups.1 FP32 (29504 params),50,0.308,3.7650,,R:qsens-sara.json (keep_top2)
+decoder (if_sara 30k),keep conv_post + ups.1 + resblocks.4 FP32 (78656 params),50,0.271,3.7673,UTMOS -0.001,R:qsens-sara.json (keep_top3); N
+text student (if_sara),all INT8: 34 of 17017 durations changed; F0 RMSE 0.214 Hz; energy L1 0.0048,100,,3.7539,e2e UTMOS +0.0001 +- 0.0097 vs FP32 3.7538,R:tqsens-sara.json; N

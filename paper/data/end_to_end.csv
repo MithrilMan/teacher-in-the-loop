@@ -1,0 +1,12 @@
+voice,decoder,n,utmos_end_to_end,utmos_teacher_forced,e2e_minus_tf,e2e_minus_tf_se,length_ratio,source
+if_sara,ours_30k_gan10_gan3,200,3.7212,3.7117,0.0095,0.0094,0.9874,R:e2e-it/report.json; N
+im_nicola,ours_30k_gan10_gan3,200,3.5845,3.5752,0.0093,0.0053,0.9906,R:e2e-it/report.json; N
+if_sara,upstream_full_recipe,200,2.2013,2.2052,-0.0039,0.0114,0.9874,R:e2e-it/report.json
+im_nicola,upstream_full_recipe,200,3.5434,3.5346,0.0088,0.0048,0.9906,R:e2e-it/report.json
+if_sara,ours_50k_gan10_gan3,200,3.7657,3.7524,0.0133,0.0087,0.9874,R:e2e-it-50k/report.json; N; same values in R:paper-e2e-sara.log
+im_nicola,ours_50k_gan10_gan3,200,3.6088,3.6014,0.0074,0.0054,0.9906,R:e2e-it-50k/report.json; N; same values in R:paper-e2e-nicola.log
+af_heart,ours_50k_gan10_gan3,200,4.4241,4.4144,0.0097,0.0031,0.988,R:paper-e2e-en.log (en-50k; text side of reproduction A)
+af_heart,final_recipe_gan3_30k,200,4.474,4.467,0.007,0.002,0.988,R:paper-e2e-en.log (en-g1)
+af_heart,released_decoder,200,4.391,4.3708,0.0202,0.0039,0.988,R:paper-e2e-en.log (en-released)
+if_sara,final_recipe_gan3_30k,200,3.8951,3.8819,0.0132,0.0077,0.9874,R:paper-e2e-sara.log (sara-g1)
+im_nicola,final_recipe_gan3_30k,200,3.6999,3.6959,0.004,0.0051,0.9906,R:paper-e2e-nicola.log (nicola-g1)

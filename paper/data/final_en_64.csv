@@ -1,0 +1,13 @@
+decoder,utmos,mel_l1,mrstft,periodicity,source
+teacher_target,4.5211,,,0.5979,R:final-en/baseline.json; N
+released,4.3628,0.5429,0.8829,0.6095,R:final-en/baseline.json; N
+ours_30k_gan10_gan3,4.3645,0.5820,0.9155,0.5967,R:final-en/baseline.json (new_gan10_gan3); N
+ours_30k_gan10,4.3441,0.5832,0.9191,0.5996,R:final-en/baseline.json (new_gan10)
+ours_30k_gan3,4.3427,0.6000,0.9328,0.5973,R:final-en/baseline.json (new_gan3)
+ours_30k_stage1_only,3.9335,0.5484,0.8829,0.5943,R:final-en/baseline.json (new_s7)
+earlier_lab_pipeline_s2_10k_gan10_gan3,4.0211,0.7037,1.0255,0.6179,R:final-en/baseline.json (old_pipeline_g2)
+upstream_clean_stage1_50k,1.2348,0.5180,0.9762,0.5744,R:final-en/baseline.json (clean_recon)
+upstream_clean_full_recipe,1.8661,0.6374,1.0545,0.5846,R:final-en-upstream/baseline.json (clean_gan3)
+upstream_clean_gan10,1.2710,0.5862,1.0323,0.5818,R:final-en-upstream/baseline.json
+upstream_seeded_stage1_50k,1.9757,0.5281,0.9799,0.5723,R:final-en-upstream/baseline.json
+upstream_seeded_full_recipe,2.8477,0.6022,1.0179,0.5833,R:final-en-upstream/baseline.json (seeded_gan3)

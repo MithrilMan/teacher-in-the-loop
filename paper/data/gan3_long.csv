@@ -1,0 +1,51 @@
+voice,evaluation,decoder,run,gan3_steps,rows,utmos,diff_vs_gan3_5k,diff_se,rows_better,source
+af_heart,paired_200,50k recipe (GAN10 -> GAN3 5k),e-s8-g10-g3,5000,200,4.4144,,,,R:g1e-pair.log (g3_5k)
+af_heart,paired_200,final recipe (same GAN10 -> GAN3 30k; G-1),g1-en-g3-30k,30000,200,4.4670,0.0526,0.0024,197,"R:g1e-pair.log (g3_30k; g3_30k-g3_5k; rows_better; eval.pair, same rows and seeds)"
+if_sara,paired_200,50k recipe (GAN10 -> GAN3 5k),it-sara-s8-g3,5000,200,3.7524,,,,R:g1-pair.log (g3_5k)
+if_sara,paired_200,final recipe (same GAN10 -> GAN3 30k; G-1),g1-sara-g3-30k,30000,200,3.8819,0.1295,0.0070,187,"R:g1-pair.log (g3_30k; g3_30k-g3_5k; rows_better; eval.pair, same rows and seeds)"
+im_nicola,paired_200,50k recipe (GAN10 -> GAN3 5k),it-nicola-s8-g3,5000,200,3.6014,,,,R:g1n-pair.log (g3_5k)
+im_nicola,paired_200,final recipe (same GAN10 -> GAN3 30k; G-1),g1-nicola-g3-30k,30000,200,3.6959,0.0944,0.0033,197,"R:g1n-pair.log (g3_30k; g3_30k-g3_5k; rows_better; eval.pair, same rows and seeds)"
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,0,16,4.3861,,,,R:g1-en-g3-30k/log.jsonl
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,2500,16,4.3489,,,,R:g1-en-g3-30k/log.jsonl
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,5000,16,4.4070,,,,R:g1-en-g3-30k/log.jsonl
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,7500,16,4.4291,,,,R:g1-en-g3-30k/log.jsonl
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,10000,16,4.4446,,,,R:g1-en-g3-30k/log.jsonl
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,12500,16,4.4285,,,,R:g1-en-g3-30k/log.jsonl
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,15000,16,4.4433,,,,R:g1-en-g3-30k/log.jsonl
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,17500,16,4.4367,,,,R:g1-en-g3-30k/log.jsonl
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,20000,16,4.4592,,,,R:g1-en-g3-30k/log.jsonl
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,22500,16,4.4599,,,,R:g1-en-g3-30k/log.jsonl
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,25000,16,4.4636,,,,R:g1-en-g3-30k/log.jsonl
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,27500,16,4.4650,,,,R:g1-en-g3-30k/log.jsonl
+af_heart,in_training_16,GAN3 30k run (G-1),g1-en-g3-30k,30000,16,4.4651,,,,R:g1-en-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,0,16,3.7755,,,,R:g1-sara-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,2500,16,3.8120,,,,R:g1-sara-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,5000,16,3.8590,,,,R:g1-sara-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,7500,16,3.8952,,,,R:g1-sara-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,10000,16,3.9507,,,,R:g1-sara-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,12500,16,3.9600,,,,R:g1-sara-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,15000,16,3.9357,,,,R:g1-sara-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,17500,16,3.9846,,,,R:g1-sara-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,20000,16,3.9655,,,,R:g1-sara-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,22500,16,3.9786,,,,R:g1-sara-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,25000,16,3.9503,,,,R:g1-sara-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,27500,16,3.9539,,,,R:g1-sara-g3-30k/log.jsonl
+if_sara,in_training_16,GAN3 30k run (G-1),g1-sara-g3-30k,30000,16,3.9587,,,,R:g1-sara-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,0,16,3.6005,,,,R:g1-nicola-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,2500,16,3.6048,,,,R:g1-nicola-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,5000,16,3.6738,,,,R:g1-nicola-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,7500,16,3.6922,,,,R:g1-nicola-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,10000,16,3.6910,,,,R:g1-nicola-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,12500,16,3.7258,,,,R:g1-nicola-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,15000,16,3.7434,,,,R:g1-nicola-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,17500,16,3.7494,,,,R:g1-nicola-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,20000,16,3.7554,,,,R:g1-nicola-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,22500,16,3.7591,,,,R:g1-nicola-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,25000,16,3.7548,,,,R:g1-nicola-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,27500,16,3.7559,,,,R:g1-nicola-g3-30k/log.jsonl
+im_nicola,in_training_16,GAN3 30k run (G-1),g1-nicola-g3-30k,30000,16,3.7624,,,,R:g1-nicola-g3-30k/log.jsonl
+af_heart,in_training_16,recipe GAN3 5k (comparison),e-s8-g10-g3,5000,16,4.4139,,,,R:e-s8-g10-g3/log.jsonl (also in curves_raw.csv)
+if_sara,in_training_16,recipe GAN3 5k (comparison),it-sara-s8-g3,5000,16,3.8157,,,,R:it-sara-s8-g3/log.jsonl (also in curves_raw.csv)
+im_nicola,in_training_16,recipe GAN3 5k (comparison),it-nicola-s8-g3,5000,16,3.6680,,,,R:it-nicola-s8-g3/log.jsonl (also in curves_raw.csv)
+if_sara,in_training_16,50k recipe + 5k GAN3 restart without comb (H-1 control),h1-sara-ctrl,5000,16,3.8475,,,,R:h1-sara-ctrl/log.jsonl (also in curves_raw.csv)
+if_sara,in_training_16,50k recipe + 5k GAN3 restart with comb (H-1),h1-sara-comb,5000,16,3.8572,,,,R:h1-sara-comb/log.jsonl (also in curves_raw.csv)

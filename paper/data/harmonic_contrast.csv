@@ -1,0 +1,31 @@
+voice,decoder,label_in_json,contrast_0_1k_db,contrast_1_2k_db,contrast_2_4k_db,contrast_4_6k_db,hnr_db,rows,source
+af_heart,Kokoro teacher (target audio),teacher,29.03,16.54,10.52,6.21,13.59,40,R:contrast-en.json
+af_heart,released Paradee decoder,released,28.41,14.14,4.36,4.14,13.43,40,R:contrast-en.json
+af_heart,reproduction A (upstream recipe; GAN3),upstream_recipe,24.78,7.73,3.89,4.03,12.12,40,R:contrast-en.json
+af_heart,ours 30k recipe (GAN10->GAN3),s7_g10_g3,28.21,13.60,4.19,4.07,13.06,40,R:contrast-en.json
+af_heart,ours 50k stage one -> GAN10,s8_g10,28.09,13.55,4.05,4.09,13.15,40,R:contrast-en.json
+af_heart,ours 50k recipe final,s8_g10_g3,28.32,14.17,4.18,4.06,13.09,40,R:contrast-en.json
+if_sara,Kokoro teacher (target audio),teacher,29.03,17.57,11.81,6.04,12.94,40,R:contrast-sara.json
+if_sara,upstream recipe (GAN3),fullv1_gan3,26.71,11.41,5.26,3.76,12.44,40,R:contrast-sara.json
+if_sara,ours stage one 30k,s1,28.53,14.10,3.74,3.20,12.83,40,R:contrast-sara.json
+if_sara,ours 30k -> GAN10,g10,28.49,14.76,5.05,3.61,12.81,40,R:contrast-sara.json
+if_sara,ours 30k recipe final (GAN3),g3,28.57,15.41,5.81,3.63,12.83,40,R:contrast-sara.json
+if_sara,ours stage one 50k,s8,28.55,15.12,3.88,3.17,12.83,40,R:contrast-sara.json
+if_sara,ours 50k -> GAN10,s8_g10,28.54,15.27,5.26,3.55,12.84,40,R:contrast-sara.json
+if_sara,ours 50k recipe final (GAN3),s8_g3,28.54,15.70,5.95,3.57,12.81,40,R:contrast-sara.json; same values in R:contrast-h1.json (base) and R:contrast-g1.json (g3_5k)
+if_sara,ours 50k recipe + 5k GAN3 restart without comb (H-1 control),ctrl,28.59,15.88,6.01,3.55,12.83,40,R:contrast-h1.json
+if_sara,ours 50k recipe + 5k GAN3 restart with 48-harmonic comb input (H-1),comb,28.59,15.99,6.07,3.58,12.82,40,R:contrast-h1.json
+if_sara,ours 50k -> GAN10 -> GAN3 30k run (G-1) at step 5000,g1_5k,28.59,15.49,6.47,3.68,12.74,40,R:contrast-g1.json
+if_sara,ours 50k -> GAN10 -> GAN3 30k run (G-1) at step 10000,g1_10k,28.69,16.52,7.29,3.63,12.86,40,R:contrast-g1.json
+if_sara,ours 50k -> GAN10 -> GAN3 30k run (G-1) at step 20000,g1_20k,28.43,16.47,7.51,3.83,12.89,40,R:contrast-g1.json
+if_sara,ours 50k -> GAN10 -> GAN3 30k run (G-1) at step 30000 (final recipe),g1_30k,28.59,16.47,7.69,3.99,12.83,40,R:contrast-g1.json
+af_heart,ours 50k -> GAN10 -> GAN3 30k run (G-1) at step 5000,g1_5k,28.3,14.26,4.33,3.97,13.13,40,R:contrast-g1e.json
+af_heart,ours 50k -> GAN10 -> GAN3 30k run (G-1) at step 10000,g1_10k,28.77,14.79,4.88,4.03,13.33,40,R:contrast-g1e.json
+af_heart,ours 50k -> GAN10 -> GAN3 30k run (G-1) at step 20000,g1_20k,28.73,14.92,5.35,4.05,13.21,40,R:contrast-g1e.json
+af_heart,ours 50k -> GAN10 -> GAN3 30k run (G-1) at step 30000 (final recipe),g1_30k,28.62,15.01,5.45,4.06,13.22,40,R:contrast-g1e.json
+im_nicola,Kokoro teacher (target audio),teacher,13.4,5.0,2.82,1.67,12.69,40,R:contrast-g1n.json (low male voice: the 40 ms Hann window does not resolve its harmonics; not interpreted)
+im_nicola,ours 50k recipe final (GAN3 5k),g3_5k,12.91,1.92,1.94,1.59,12.35,40,R:contrast-g1n.json (low male voice: the 40 ms Hann window does not resolve its harmonics; not interpreted)
+im_nicola,ours 50k -> GAN10 -> GAN3 30k run (G-1) at step 5000,g1_5k,12.84,1.92,1.98,1.59,12.42,40,R:contrast-g1n.json (low male voice: the 40 ms Hann window does not resolve its harmonics; not interpreted)
+im_nicola,ours 50k -> GAN10 -> GAN3 30k run (G-1) at step 10000,g1_10k,13.19,2.18,2.04,1.58,12.2,40,R:contrast-g1n.json (low male voice: the 40 ms Hann window does not resolve its harmonics; not interpreted)
+im_nicola,ours 50k -> GAN10 -> GAN3 30k run (G-1) at step 20000,g1_20k,13.37,2.7,2.07,1.6,12.32,40,R:contrast-g1n.json (low male voice: the 40 ms Hann window does not resolve its harmonics; not interpreted)
+im_nicola,ours 50k -> GAN10 -> GAN3 30k run (G-1) at step 30000 (final recipe),g1_30k,13.17,2.84,2.04,1.62,12.36,40,R:contrast-g1n.json (low male voice: the 40 ms Hann window does not resolve its harmonics; not interpreted)

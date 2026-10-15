@@ -1,0 +1,10 @@
+voice,recipe,decoder,decoder_params,contrast_1-2k_db,contrast_2-4k_db,contrast_4-6k_db,hnr_db,utmos_200,paired_vs_adopted,paired_se,rows_better,e2e_fp32_100,e2e_int8_100,int8_mb,x_realtime_int8,source
+if_sara,teacher,kokoro,53.31M,17.57,11.81,6.04,12.94,4.022,,,,,,,,R:contrast-wide.json; italian_200.csv
+if_sara,50k,adopted,3.85M,15.70,5.95,3.57,12.81,3.7524,,,,,,,,R:pair-wide-50k.log (adopted); harmonic_contrast.csv
+if_sara,50k,wider,6.54M,17.05,8.19,3.58,12.96,3.8857,0.1333,0.0077,182,,,,,"R:pair-wide-50k.log (wider); contrast-wide.json (wider, 50k recipe)"
+if_sara,final,adopted,3.85M,16.47,7.69,3.99,12.83,3.8819,,,,3.9237,3.9166,9.17,27.5,R:pair-wide-final.log (adopted); onnxcheck-sara-final.json; L:eval/bench_onnx.py (2026-10-15)
+if_sara,final,wider,6.54M,17.46,10.49,4.42,13.06,4.0045,0.1226,0.0072,182,4.0332,4.0361,11.93,12.3,R:pair-wide-final.log (wider); contrast-wide.json; onnxcheck-sara-wide.json; L:eval/bench_onnx.py (2026-10-15)
+im_nicola,50k,wider vs adopted,,,,,,3.6314,0.0300,0.0042,143,,,,,R:pair-wide-nicola.log
+im_nicola,teacher,kokoro,53.31M,,,,,3.8666,,,,,,,,R:final-nicola/baseline.json (italian_200.csv); contrast not interpreted for this voice (see harmonic_contrast.csv)
+im_nicola,final,adopted,3.85M,,,,,3.6959,,,,3.7259,3.7159,9.17,,R:w2n-pair.log (a_g1_30k); onnx-nicola-gan30k.log
+im_nicola,final,wider,6.54M,,,,,3.7553,0.0595,0.0039,177,3.7769,3.7767,11.92,,R:w2n-pair.log (w2n_30k); onnxcheck-nicola-w2.json

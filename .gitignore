@@ -12,3 +12,4 @@ out/
 
 # Built Hugging Face Space
 space/site/
+dist/
